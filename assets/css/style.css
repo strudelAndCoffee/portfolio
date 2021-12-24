@@ -57,10 +57,9 @@ header nav div a {
 .section-title {
     background-color: var(--txt-color1);
     color: var(--bg-color);
-    border-bottom: 1px solid black;
     position: -webkit-sticky;
     position: sticky;
-    top: 60px;
+    top: 55px;
 }
 
 .section-div {
