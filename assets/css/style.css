@@ -17,12 +17,9 @@ header {
     z-index: 9999;
 }
 
-header h1 {
+header h1 a {
     font-family: "Times new Roman";
     padding-left: 6px;
-}
-
-header h1 a {
     font-size: 33px;
     text-decoration: none;
     color: var(--txt-color1);
@@ -52,11 +49,11 @@ nav div a {
     background-color: white;
 }
 
-.section {
+.container {
     background-color: var(--txt-color1);
 }
 
-.section-title {
+.title {
     color: var(--bg-color);
     background-color: var(--txt-color1);
     margin: 0;
@@ -67,35 +64,50 @@ nav div a {
     top: 56px;
 }
 
-.section-div {
+.item {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     height: 500px;
 }
 
+footer {
+    text-align: center;
+    color: var(--txt-color1);
+    background-color: var(--bg-color);
+}
+
 @media screen and (min-width: 768px) {
-    nav {
-        display: flex;
-        justify-content: flex-end;
-        border-top: 1px solid var(--txt-color1);
-        margin: 0;
+   header h1 a {
+        font-size: 43px;
     }
 
     .nav-link {
-        width: 200px;
-        padding-right: 50px;
+        width: 100px;
+        margin: 0 50px;
     }
 
     section {
         display: flex;
     }
 
-    .section-title {
+    .title {
         text-align: center;
+        top: 66px;
     }
 
     article {
         flex: 1 50%;
+    }
+}
+
+@media screen and (min-width: 980px) {
+    header {
+        text-align: center;
+    }
+   
+    .nav-link {
+        width: 120px;
+        margin: 0 70px;
     }
 }
