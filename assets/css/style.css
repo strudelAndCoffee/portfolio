@@ -1,8 +1,9 @@
 :root {
     --bg-color: black;
+    --bg-color2: rgba(152, 140, 130, 0.6);
     --txt-color1: cyan;
     --txt-shadow: rgba(0, 255, 255, 0.3);
-    --box-shadow: rgba(0, 167, 167, 0.5);
+    --box-shadow: rgba(0, 155, 155, 0.7);
 }
 
 * {
@@ -62,7 +63,7 @@ nav div a {
     background-color: var(--txt-color1);
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -81,16 +82,18 @@ nav div a {
 
 /* Work section elements */
 .item {
-    /*flex-basis: 220px;
-    width: 70%;*/
-    text-align: center;
-    border: 2px ridge var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bg-color2);
+    padding: 3px;
+    border: 3px outset var(--box-shadow);
+    border-radius: 17px;
     margin: 12px 0;
+    box-shadow: 3px 4px 8px var(--box-shadow);
 }
 
 .first {
-    /*flex-basis: 300px;
-    width: 95%;*/
     margin-top: 20px;
 }
 
@@ -98,6 +101,9 @@ nav div a {
 main div img {
     height: 200px;
     width: 200px;
+    flex-grow: 0;
+    border: 1px solid black;
+    border-radius: 13px 13px 0 0;
 }
 
 .first img {
@@ -105,7 +111,15 @@ main div img {
     width: 260px;
 }
 
+.first p {
+    flex: 1 0 100%;
+}
+
 /*** Bio and Contact sections ***/
+section.container {
+    align-items: flex-start;
+}
+
 section article div {
     width: 250px;
 }
@@ -120,7 +134,7 @@ footer {
     background-color: var(--bg-color);
 }
 
-/*** Adjustments for screens w/ width from 768px to 850px ***/
+/*** Adjustments for screens w/ width from 768px to 957px ***/
 @media screen and (min-width: 768px) {
    header h1 a {
         font-size: 43px;
@@ -138,8 +152,8 @@ footer {
     .container {
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: flex-start;
+        justify-content: space-evenly;
+        align-items: center;
     }
 
     .title {
@@ -148,15 +162,22 @@ footer {
         top: 72px;
     }
 
+    main div img {
+        height: 280px;
+        width: 280px;
+    }
+    
+    .first img {
+        height: 370px;
+        width: 400px;
+    }
+
     .item {
-        height: 270px;
-        flex-basis: 47%;
-        flex-grow: 0;
+        margin: 25px;
     }
 
     .first {
-        height: 370px;
-        flex-basis: 95%;
+        margin: 22px 110px 10px 110px;
     }
 
     section {
@@ -169,8 +190,8 @@ footer {
     }
 }
 
-/*** Adjustments for screens w/ width from 850px to 1030px ***/
-@media screen and (min-width: 850px) {
+/*** Adjustments for screens w/ width from 957px to 1156px ***/
+@media screen and (min-width: 957px) {
     header {
         text-align: center;
     }
@@ -198,10 +219,27 @@ footer {
     }
 
     .item {
-        height: 320px;
+        margin-bottom: 5%;
     }
 
     .first {
-        height: 420px;
+        margin: 30px;
     }
+}
+
+/*** Adjustments for screens w/ width 1156px and up ***/
+@media screen and (min-width: 1156px) {
+    .first {
+        margin: 50px;
+    }
+
+    main div img {
+        height: 330px;
+        width: 330px;
+    }
+    
+    .first img {
+        height: 420px;
+        width: 450px;
+    }    
 }
