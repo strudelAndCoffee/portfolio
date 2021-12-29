@@ -52,9 +52,16 @@ nav {
     text-align: center;
 }
 
-nav div a {
+.fade-nav {
     color: var(--txt-color1);
+    font-size: 19px;
     text-decoration: none;
+    border-bottom: 1px solid black;
+}
+
+.fade-nav:hover {
+    border-bottom: 1px solid cyan;
+    transition: 1s ease;
 }
 
 /*** Hero Section ***/
@@ -72,13 +79,13 @@ nav div a {
 }
 
 .hero-img img {
-    height: 85%;
-    width: 85%;
+    height: 80%;
+    width: 80%;
     border: 2px solid rgba(0, 0, 0, 0.5);
     border-radius: 50%;
 }
 
-.hero-txt h3 {
+.hero-txt h3, .hero-txt p {
     font-size: 40px;
     color: var(--txt-color1);
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
@@ -106,6 +113,7 @@ nav div a {
     position: -webkit-sticky;
     position: sticky;
     top: 60px;
+    z-index: 2;
 }
 
 .break {
@@ -143,6 +151,11 @@ nav div a {
     border-radius: 14px 14px 0 0;
 }
 
+.item a img:hover {
+    border: none;
+    filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.6));
+}
+
 .first a img {
     width: 90vw;
     height: 85vw;
@@ -168,6 +181,18 @@ section article div {
 
 #contact div {
     text-align: center;
+}
+
+.fade-contact {
+    color: black;
+    font-size: 22px;
+    text-decoration: none;
+    border-bottom: 2px solid var(--txt-color1);
+}
+
+.fade-contact:hover {
+    border-bottom: 2px solid black;
+    transition: 1.2s ease;
 }
 
 /*** Footer ***/
@@ -246,7 +271,7 @@ footer {
         margin: 0 60px;
     }
 
-    nav div a {
+    .fade {
         font-size: 19px;
     }
 
@@ -294,6 +319,7 @@ footer {
         position: -webkit-sticky;
         position: sticky;
         top: 75px;
+        z-index: 3;
     }
 
     .contact-title {
