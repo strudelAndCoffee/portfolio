@@ -38,6 +38,7 @@ header h1 a {
     text-decoration: none;
     color: var(--txt-color1);
     text-shadow: 0 0 8px var(--txt-shadow);
+    border-bottom: 1px solid var(--txt-color1);
 }
 
 /* nav section on header */
@@ -80,6 +81,7 @@ nav {
 
 .hero-img, .hero-txt {
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .hero-img img {
@@ -116,13 +118,13 @@ nav {
     box-shadow: 0 1px 4px var(--box-shadow);
     position: -webkit-sticky;
     position: sticky;
-    top: 60px;
+    top: 68px;
     z-index: 2;
 }
 
 .break {
     width: 100%;
-    height: 62px;
+    height: 75px;
 }
 
 /* Work section elements */
@@ -134,12 +136,19 @@ nav {
     align-items: center;
     background-color: var(--txt-color1);
     border: 3px outset var(--box-shadow);
-    border-radius: 17px;
     margin-bottom: 10%;
+}
+
+.item h3 {
+    font-size: 24px;
+    margin-top: 5px;
 }
 
 .item p {
     font-style: italic;
+    font-size: 18px;
+    margin: 2px 12px 5px 12px;
+    text-align: center;
 }
 
 .first {
@@ -151,7 +160,6 @@ nav {
     width: 77vw;
     height: 68vw;
     border: 1px solid black;
-    border-radius: 14px 14px 0 0;
 }
 
 .item a img:hover {
@@ -164,9 +172,9 @@ nav {
     height: 80vw;
 }
 
-.first p {
+/*.first p {
     flex: 1 0 100%;
-}
+}*/
 
 /*** Bio and Contact sections ***/
 section {
