@@ -129,15 +129,14 @@ nav {
 
 /* Work section elements */
 .item {
-    width: 78vw;
+    width: 83vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: var(--txt-color1);
     border: 3px outset var(--box-shadow);
-    border-radius: 10px;
-    margin-bottom: 10%;
+    margin-bottom: 12%;
 }
 
 .item h3 {
@@ -146,22 +145,24 @@ nav {
 }
 
 .item p {
+    text-align: center;
+    margin: 2px 12px 15px 12px;
+}
+
+.item p span {
     font-style: italic;
     font-size: 18px;
-    margin: 2px 12px 5px 12px;
-    text-align: center;
 }
 
 .first {
-    width: 89vw;
+    width: 94vw;
 }
 
 /* Work section images */
 .item a img {
-    width: 77vw;
-    height: 68vw;
+    width: 81vw;
+    height: 70vw;
     border: 1px solid black;
-    border-radius: 9px 9px 0 0;
 }
 
 .item a img:hover {
@@ -170,13 +171,9 @@ nav {
 }
 
 .first a img {
-    width: 88vw;
-    height: 80vw;
+    width: 92vw;
+    height: 82vw;
 }
-
-/*.first p {
-    flex: 1 0 100%;
-}*/
 
 /*** Bio and Contact sections ***/
 section {
@@ -227,6 +224,13 @@ footer {
     background-color: var(--sub-bg-color);
 }
 
+footer a {
+    text-decoration: none;
+    font-size: 13px;
+    color: var(--txt-color1);
+    padding-bottom: 25px;
+}
+
 /*** Adjustments for screens w/ width from 500px to 767px ***/
 @media screen and (min-width: 500px) {
     header h1 a {
@@ -253,7 +257,7 @@ footer {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
-        align-items: center;
+        align-items: baseline;
     }
 
     .title, .contact-title {
@@ -270,7 +274,7 @@ footer {
     }
 
     .first {
-        width: 55vw;
+        width: 60vw;
         margin: 0 5% 8% 5%;
     }
 
@@ -280,7 +284,7 @@ footer {
     }
 
     .first a img {
-        width: 54vw;
+        width: 59vw;
         height: 48vw;
     }
 }
@@ -301,6 +305,10 @@ footer {
         font-size: 19px;
     }
 
+    .container {
+        align-items: flex-start;
+    }
+
     .title {
         top: 81px;
     }
@@ -314,7 +322,7 @@ footer {
     }
 
     .first {
-        width: 44vw;
+        width: 48vw;
         margin: 0 0 8% 0;
     }
 
@@ -324,8 +332,8 @@ footer {
     }
 
     .first a img {
-        width: 43vw;
-        height: 39vw;
+        width: 47vw;
+        height: 42vw;
     }
 
     section {
@@ -390,7 +398,7 @@ footer {
     }
 
     .first a img {
-        width: 431px;
+        width: 429px;
         height: 398px;
     }
 }
