@@ -1,11 +1,38 @@
+/*
 :root {
-    --sub-bg-color: black;
-    --bg-color1: linear-gradient(to bottom right, black, var(--txt-color1));
-    --bg-color2: linear-gradient(to bottom right, var(--txt-color1), black);
-    --txt-color1: rgb(0, 205, 211);
+    --dark1: black;
+    --bg-grad1: linear-gradient(to bottom right, black, var(--light1));
+    --bg-grad2: linear-gradient(to bottom right, var(--light1), black);
+    --light1: rgb(0, 205, 211);
     --txt-shadow: rgba(0, 211, 211, 0.4);
     --box-shadow: rgba(0, 122, 122, 0.7);
 }
+*/
+
+:root {
+    --dark1: ;
+    --bg-grad1: linear-gradient(to bottom right, , );
+    --bg-grad2: linear-gradient(to bottom right, , );
+    --light1: ;
+    --light2: ;
+    --txt-shadow: ;
+    --box-shadow: ;
+    --borderLight: ;
+    --borderDark: ;
+    --borderFade: ;
+}
+
+/*
+taupe= rgba(72, 60, 50, 1)
+taupe dark= rgba(36, 30, 25, 1)
+coffee= rgba(74, 44, 42, 1)
+brick red= rgba(220, 85, 57, 1)
+brick brown= rgba(139, 79, 57, 1)
+cream= rgba(255, 253, 208, 1)
+peach= rgba(255, 214, 209, 1)
+*/
+
+
 
 * {
     margin: 0;
@@ -19,26 +46,20 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-    background-color: black;
-}
-
 /*** Header Section ***/
 /* main header */
 header {
-    background-color: var(--sub-bg-color);
-    width: 100%;
+    background-color: var(--dark1);
     text-align: center;
-    padding-top: 7px;
 }
 
 header h1 a {
     font-family: "Times new Roman";
-    font-size: 35px;
+    font-size: 40px;
     text-decoration: none;
-    color: var(--txt-color1);
+    color: var(--light1);
     text-shadow: 0 0 8px var(--txt-shadow);
-    border-bottom: 1px solid var(--txt-color1);
+    border-bottom: 1px solid var(--light1);
 }
 
 /* nav section on header */
@@ -55,15 +76,15 @@ header nav {
 }
 
 .fade-nav {
-    color: var(--txt-color1);
+    color: var(--light1);
     font-size: 19px;
     text-decoration: none;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--borderDark);
 }
 
 .fade-nav:hover {
-    color: cyan;
-    border-bottom: 1px solid cyan;
+    color: var(--txt-color2);
+    border-bottom: 1px solid var(--txt-color2);
     transition: 0.7s ease;
 }
 
@@ -74,7 +95,7 @@ header nav {
     justify-content: center;
     width: 100%;
     padding: 22vw 0;
-    background-image: var(--bg-color1);
+    background-image: var(--bg-grad1);
 }
 
 .hero-img, .hero-txt {
@@ -85,20 +106,20 @@ header nav {
 .hero-img img {
     height: 80%;
     width: 80%;
-    border: 2px solid rgba(0, 0, 0, 0.5);
+    border: 2px solid var(--borderLight);
     border-radius: 50%;
 }
 
 .hero-txt h3, .hero-txt p {
     font-size: 155%;
-    color: cyan;
+    color: var(--txt-color2);
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
 }
 
 /*** Main Section (deployed websites) ***/
 .container {
     width: 100%;
-    background-image: var(--bg-color2);
+    background-image: var(--bg-grad2);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -109,9 +130,9 @@ header nav {
 .title, .contact-title {
     width: 100%;
     text-align: center;
-    color: var(--sub-bg-color);
-    background-color: var(--txt-color1);
-    padding: 0 5px 0 5px;
+    color: var(--dark1);
+    background-color: var(--light1);
+    padding: 4px;
     box-shadow: 0 1px 4px var(--box-shadow);
     position: -webkit-sticky;
     position: sticky;
@@ -132,7 +153,7 @@ header nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--txt-color1);
+    background-color: var(--light1);
     border: 3px outset var(--box-shadow);
     margin-top: 4%;
     margin-bottom: 20%;
@@ -155,7 +176,7 @@ header nav {
 .item p {
     font-size: 95%;
     line-height: 1.4;
-    border-top: 1px solid black;
+    border-top: 1px solid var(--borderDark);
     padding-top: 7px;
     margin: 7px 13px 18px 13px;
 }
@@ -168,12 +189,12 @@ header nav {
 .item a img {
     width: 73vw;
     height: 65vw;
-    border: 1px solid black;
+    border: 1px solid var(--borderDark);
 }
 
 .item a img:hover {
     border: none;
-    filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.6));
+    filter: drop-shadow(3px 3px 4px var(--borderLight));
 }
 
 .first a img {
@@ -184,7 +205,7 @@ header nav {
 /*** Bio and Contact sections ***/
 section {
     width: 100%;
-    background-color: black;
+    background-color: var(--dark1);
 }
 
 section article {
@@ -192,10 +213,9 @@ section article {
 }
 
 section article div {
-    color: var(--txt-color1);
+    color: var(--light1);
     font-size: 20px;
-    padding: 0 8%;
-    margin: 38px 0 25px 0;
+    padding: 38px 8% 25px 8%;
 }
 
 #bio div p {
@@ -208,7 +228,7 @@ section article div {
 
 #resume div h4 {
     font-size: 26px;
-    color: cyan;
+    color: var(--txt-color2);
 }
 
 #resume div ul {
@@ -221,7 +241,7 @@ section article div {
 }
 
 #contact {
-    background-image: var(--bg-color2);
+    background-image: var(--bg-grad2);
 }
 
 #contact div {
@@ -233,41 +253,36 @@ section article div {
 }
 
 .fade-contact {
-    color: var(--txt-color1);
+    color: var(--light1);
     font-size: 30px;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    text-shadow: 1px 1px 4px var(--borderLight);
     text-decoration: none;
-    border-bottom: 1px solid rgba(0, 255, 255, 0);
+    border-bottom: 1px solid var(--borderFade);
 }
 
 .fade-contact:hover {
-    color: cyan;
-    border-bottom: 1px solid rgba(0, 255, 255, 1);
+    color: var(--txt-color2);
+    border-bottom: 1px solid var(--light1);
     transition: all 0.7s ease;
 }
 
 /*** Footer ***/
 footer {
-    width: 100%;
     text-align: center;
     font-size: 21px;
-    color: var(--txt-color1);
-    background-color: var(--sub-bg-color);
+    color: var(--light1);
+    background-color: var(--dark1);
 }
 
 footer a {
     text-decoration: none;
     font-size: 17px;
-    color: var(--txt-color1);
+    color: var(--light1);
     padding-bottom: 25px;
 }
 
 /*** Adjustments for screens w/ width from 500px to 719px ***/
 @media screen and (min-width: 500px) {
-    header h1 a {
-        font-size: 40px;
-    }
-
     .hero {
         padding: 14vw 0;
     }
@@ -470,6 +485,7 @@ footer a {
         height: 420px;
     }
 }
+
 
 /*** Adjustments for screens w/ width 1030px and up ***/
 @media screen and (min-width: 1030px) {
