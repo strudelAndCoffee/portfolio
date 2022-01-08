@@ -448,8 +448,12 @@ footer a {
         font-size: 255%;
     }
 
+    .container {
+        padding-bottom: 5%;
+    }
+
     .break {
-        height: 8vw;
+        height: 6vw;
     }
 
     .item {
@@ -480,5 +484,9 @@ footer a {
 
     .hero-img {
         flex-basis: 50%;
+    }
+
+    .break {
+        height: 5vw;
     }
 }
