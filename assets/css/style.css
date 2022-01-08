@@ -103,7 +103,6 @@ header nav {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    padding-bottom: 15%;
 }
 
 /* header for "Work" section */
@@ -136,7 +135,7 @@ header nav {
     background-color: var(--txt-color1);
     border: 3px outset var(--box-shadow);
     margin-top: 4%;
-    margin-bottom: 12%;
+    margin-bottom: 20%;
 }
 
 .item h3, span, p {
@@ -291,7 +290,7 @@ footer a {
 
     .item {
         width: 55vw;
-        margin: 3% 3% 10% 3%;
+        margin: 0 3% 15% 3%;
     }
 
     .first {
@@ -339,7 +338,6 @@ footer a {
     .container {
         justify-content: center;
         align-items: flex-start;
-        padding-bottom: 10%;
     }
 
     .break {
@@ -348,6 +346,7 @@ footer a {
 
     .item {
         width: 38vw;
+        margin-bottom: 10%;
     }
 
     .first {
@@ -448,17 +447,13 @@ footer a {
         font-size: 255%;
     }
 
-    .container {
-        padding-bottom: 5%;
-    }
-
     .break {
         height: 6vw;
     }
 
     .item {
         width: 350px;
-        margin-bottom: 5%;
+        margin-bottom: 7%;
     }
 
     .first {
