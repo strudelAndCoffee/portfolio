@@ -11,17 +11,17 @@
 
 :root {
     --dark1: black;
-    --dark2: rgba(72, 60, 50, 1);
+    --dark2: rgba(0, 100, 0, 1);
     --bg-grad1: linear-gradient(to bottom right, var(--dark1), var(--dark2));
     --bg-grad2: linear-gradient(to bottom right, var(--dark2), var(--dark1));
-    --light1: rgba(240, 238, 193, 1);
-    --light2: rgba(255, 255, 240, 1);
-    --fadeLight: white;
+    --light1: rgba(55, 225, 0, 1);
+    --light2: rgba(255, 253, 208, 1);
+    --fadeLight: rgba(100, 255, 255, 1);
     --item: rgba(240, 238, 193, 0.8);
-    --txt-shadow: rgba(255, 253, 208, 0.3);
-    --box-shadow: rgba(72, 60, 50, 0.9);
+    --txt-shadow: rgba(55, 255, 0, 0.3);
+    --box-shadow: rgba(0, 100, 0, 0.9);
     --borderLight: ;
-    --borderDark: ;
+    --borderDark: black;
     --borderFade: rgba(235, 233, 188, 0);
 }
 
@@ -91,7 +91,7 @@ header nav {
 
 .fade-nav:hover {
     color: var(--fadeLight);
-    border-bottom: 1px solid var(--light2);
+    border-bottom: 1px solid var(--fadeLight);
     transition: 0.7s ease;
 }
 
@@ -215,11 +215,7 @@ section {
     background-color: var(--dark1);
 }
 
-section article {
-    width: 100%;
-}
-
-section article div {
+article div {
     color: var(--light2);
     font-size: 20px;
     padding: 38px 8% 25px 8%;
@@ -231,6 +227,7 @@ section article div {
 
 #resume {
     text-align: center;
+    padding-bottom: 50px;
 }
 
 #resume div h4 {
@@ -239,7 +236,7 @@ section article div {
 }
 
 #resume div ul {
-    margin: 20px 0 35px 12%;
+    margin: 15px 0 10px 10%;
 }
 
 #resume div ul li {
@@ -269,7 +266,7 @@ section article div {
 
 .fade-contact:hover {
     color: var(--fadeLight);
-    border-bottom: 1px solid var(--light2);
+    border-bottom: 1px solid var(--fadeLight);
     transition: all 0.7s ease;
 }
 
@@ -346,6 +343,7 @@ footer a {
         justify-content: center;
         align-items: center;
         padding: 9vw 0;
+        margin-bottom: 5%;
     }
 
     .hero-img {
@@ -358,6 +356,8 @@ footer a {
     }
 
     .container {
+        width: 90%;
+        margin: 0 5% 5% 5%;
         justify-content: center;
         align-items: flex-start;
     }
@@ -387,11 +387,12 @@ footer a {
     }
 
     section {
+        width: 100%;
         display: flex;
         flex-direction: row;
     }
     
-    section article {
+    section div article {
         box-shadow: 2px 2px 3px var(--box-shadow);
     }
 
@@ -403,6 +404,7 @@ footer a {
 
     #resume {
         display: flex;
+        flex-direction: row;
         justify-content: center;
         flex-wrap: wrap;
     }
@@ -412,12 +414,16 @@ footer a {
     }
 
     #resume div {
-        flex-basis: 40%;
+        flex-basis: 50%;
         text-align: left;
     }
 
+    #resume div h4 {
+        margin-left: 15%;
+    }
+
     #resume div ul {
-        margin: 20px 0 35px 0;
+        margin: 20px 0 35px 10%;
     }
     
     #resume div ul li {
