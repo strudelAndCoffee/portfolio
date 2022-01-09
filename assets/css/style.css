@@ -10,16 +10,19 @@
 */
 
 :root {
-    --dark1: ;
-    --bg-grad1: linear-gradient(to bottom right, , );
-    --bg-grad2: linear-gradient(to bottom right, , );
-    --light1: ;
-    --light2: ;
-    --txt-shadow: ;
-    --box-shadow: ;
+    --dark1: black;
+    --dark2: rgba(72, 60, 50, 1);
+    --bg-grad1: linear-gradient(to bottom right, var(--dark1), var(--dark2));
+    --bg-grad2: linear-gradient(to bottom right, var(--dark2), var(--dark1));
+    --light1: rgba(240, 238, 193, 1);
+    --light2: rgba(255, 255, 240, 1);
+    --fadeLight: white;
+    --item: rgba(240, 238, 193, 0.8);
+    --txt-shadow: rgba(255, 253, 208, 0.3);
+    --box-shadow: rgba(72, 60, 50, 0.9);
     --borderLight: ;
     --borderDark: ;
-    --borderFade: ;
+    --borderFade: rgba(235, 233, 188, 0);
 }
 
 /*
@@ -46,6 +49,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    background-color: black;
+}
+
 /*** Header Section ***/
 /* main header */
 header {
@@ -58,7 +65,7 @@ header h1 a {
     font-size: 40px;
     text-decoration: none;
     color: var(--light1);
-    text-shadow: 0 0 8px var(--txt-shadow);
+    text-shadow: 0 0 6px var(--txt-shadow);
     border-bottom: 1px solid var(--light1);
 }
 
@@ -83,8 +90,8 @@ header nav {
 }
 
 .fade-nav:hover {
-    color: var(--txt-color2);
-    border-bottom: 1px solid var(--txt-color2);
+    color: var(--fadeLight);
+    border-bottom: 1px solid var(--light2);
     transition: 0.7s ease;
 }
 
@@ -112,8 +119,8 @@ header nav {
 
 .hero-txt h3, .hero-txt p {
     font-size: 155%;
-    color: var(--txt-color2);
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    color: var(--light2);
+    text-shadow: 1px 1px 4px var(--txt-shadow);
 }
 
 /*** Main Section (deployed websites) ***/
@@ -130,8 +137,8 @@ header nav {
 .title, .contact-title {
     width: 100%;
     text-align: center;
-    color: var(--dark1);
-    background-color: var(--light1);
+    color: var(--light2);
+    background-color: var(--dark2);
     padding: 4px;
     box-shadow: 0 1px 4px var(--box-shadow);
     position: -webkit-sticky;
@@ -153,7 +160,7 @@ header nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--light1);
+    background-color: var(--item);
     border: 3px outset var(--box-shadow);
     margin-top: 4%;
     margin-bottom: 20%;
@@ -213,7 +220,7 @@ section article {
 }
 
 section article div {
-    color: var(--light1);
+    color: var(--light2);
     font-size: 20px;
     padding: 38px 8% 25px 8%;
 }
@@ -228,7 +235,7 @@ section article div {
 
 #resume div h4 {
     font-size: 26px;
-    color: var(--txt-color2);
+    color: var(--light2);
 }
 
 #resume div ul {
@@ -255,14 +262,14 @@ section article div {
 .fade-contact {
     color: var(--light1);
     font-size: 30px;
-    text-shadow: 1px 1px 4px var(--borderLight);
+    text-shadow: 1px 1px 4px var(--txt-shadow);
     text-decoration: none;
     border-bottom: 1px solid var(--borderFade);
 }
 
 .fade-contact:hover {
-    color: var(--txt-color2);
-    border-bottom: 1px solid var(--light1);
+    color: var(--fadeLight);
+    border-bottom: 1px solid var(--light2);
     transition: all 0.7s ease;
 }
 
