@@ -14,15 +14,17 @@
     --dark2: rgba(0, 100, 0, 1);
     --bg-grad1: linear-gradient(to bottom right, var(--dark1), var(--dark2));
     --bg-grad2: linear-gradient(to bottom right, var(--dark2), var(--dark1));
-    --light1: rgba(55, 225, 0, 1);
+    --bg-article: rgba(36, 30, 25, 1);
+    --light1: rgba(0, 225, 200, 1);
     --light2: rgba(255, 253, 208, 1);
     --fadeLight: rgba(100, 255, 255, 1);
-    --item: rgba(240, 238, 193, 0.8);
+    --item: var(--light2);
     --txt-shadow: rgba(55, 255, 0, 0.3);
     --box-shadow: rgba(0, 100, 0, 0.9);
     --borderLight: ;
     --borderDark: black;
     --borderFade: rgba(235, 233, 188, 0);
+    --title-font: "Courier New";
 }
 
 /*
@@ -61,7 +63,7 @@ header {
 }
 
 header h1 a {
-    font-family: "Times new Roman";
+    font-family: var(--title-font);
     font-size: 40px;
     text-decoration: none;
     color: var(--light1);
@@ -119,6 +121,7 @@ header nav {
 
 .hero-txt h3, .hero-txt p {
     font-size: 155%;
+    font-family: var(--title-font);
     color: var(--light2);
     text-shadow: 1px 1px 4px var(--txt-shadow);
 }
@@ -135,10 +138,11 @@ header nav {
 
 /* header for "Work" section */
 .title, .contact-title {
+    font-family: var(--title-font);
     width: 100%;
     text-align: center;
     color: var(--light2);
-    background-color: var(--dark2);
+    background-color: var(--dark1);
     padding: 4px;
     box-shadow: 0 1px 4px var(--box-shadow);
     position: -webkit-sticky;
