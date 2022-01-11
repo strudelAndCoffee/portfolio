@@ -92,11 +92,11 @@ header nav {
 
 .hero-txt {
     text-align: center;
-    margin-top: 10%;
+    margin: 10% 0;
 }
 
 .hero-txt h3, .hero-txt p {
-    font-size: 200%;
+    font-size: 150%;
     color: var(--light2);
 }
 
@@ -292,8 +292,11 @@ footer a {
 
     .hero-txt {
         width: 40%;
-        margin-top: 0;
-        padding-right: 20%
+        margin: 0 15% 0 0;
+    }
+
+    .hero-txt h3, .hero-txt p {
+        font-size: 140%;
     }
 
     .container {
