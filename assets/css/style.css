@@ -203,16 +203,16 @@ article div {
     padding-bottom: 50px;
 }
 
-#resume div h4 {
+.skillz h4 {
     font-size: 26px;
     color: var(--light2);
 }
 
-#resume div ul {
-    margin: 15px 0 10px 10%;
+.skillz ul {
+    margin: 15px 0 10px 0;
 }
 
-#resume div ul li {
+.skillz ul li {
     text-align: left;
     padding: 5px;
 }
