@@ -3,7 +3,7 @@ export default function Navbar() {
         <nav>
             <a href='/portfolio'>Portfolio</a>
             <a href='/about'>About</a>
-            <a href='/certificates'>Certificates</a>
+            <a href='/certification'>Certification</a>
             <a href='/resume'>Resume</a>
             <a href='/community'>Community</a>
             <a href='/contact'>Contact</a>
