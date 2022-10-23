@@ -30,9 +30,7 @@ function App() {
           </Routes>
         </main>
       </Router>
-      <footer>
-        <Footer />
-      </footer>
+      <Footer />
     </div>
   )
 }
