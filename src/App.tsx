@@ -6,6 +6,13 @@ import './css/global.css'
 import Header from './components/Header'
 import Footer from './components/Footer'
 // Pages
+// import Home from './pages/Home'
+// import Portfolio from './pages/Portfolio'
+// import About from './pages/About'
+// import Certification from './pages/Certification'
+// import Resume from './pages/Resume'
+// import Community from './pages/Community'
+// import Contact from './pages/Contact'
 const Home = lazy(() => import('./pages/Home'))
 const Portfolio = lazy(() => import('./pages/Portfolio'))
 const About = lazy(() => import('./pages/About'))
