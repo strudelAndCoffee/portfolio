@@ -3,9 +3,10 @@ import Navbar from "./Navbar";
 export default function Header() {
     return (
         <header>
-            <h1>
-                <a href='/' className='main-title'>Stephen Trudell</a>
-            </h1>
+            <div className='main-title' onClick={() => window.location.assign('/')}>
+                <h1>Stephen Trudell</h1>
+                <p>Full Stack Web Developer</p>
+            </div>
             <Navbar />
         </header>
     )

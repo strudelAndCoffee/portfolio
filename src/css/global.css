@@ -15,19 +15,25 @@
 
 header {
     width: 100%;
+    min-height: 8vh;
     display: flex;
     justify-content: space-between;
+    background-image: linear-gradient(to bottom, rgba(222,222,222,1), rgba(255,255,255,0));
 }
 
-h1 {
+.main-title {
     width: 22%;
     text-align: center;
     flex-grow: 0;
     flex-shrink: 0;
+    padding-top: 5px;
 }
 
-.main-title {
-    text-decoration: none;
+.main-title:hover {
+    cursor: pointer;
+}
+
+.main-title h1 {
     color: darkolivegreen;
 }
 
@@ -36,7 +42,7 @@ nav {
     flex-shrink: 0;
     display: flex;
     justify-content: space-evenly;
-    align-items: flex-end;
+    align-items: center;
 }
 
 main {
