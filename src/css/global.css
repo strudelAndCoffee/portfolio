@@ -18,6 +18,11 @@ h1 {
     flex-shrink: 0;
 }
 
+.main-title {
+    text-decoration: none;
+    color: darkolivegreen;
+}
+
 nav {
     flex-grow: 1;
     flex-shrink: 0;
