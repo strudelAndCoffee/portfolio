@@ -5,13 +5,13 @@
     text-decoration: none;
 }
 
-/* body {
+.bgImg {
     height: 100vh;
     background-image: url('../assets/images/carlos-alfonso-skyline-clip-resize-bw.png');
-    background-position: center;
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
-} */
+}
 
 header {
     width: 100%;
