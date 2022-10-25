@@ -23,10 +23,10 @@ const Contact = lazy(() => import('./pages/Contact'))
 
 function App() {
   return (
-    <div className='container'>
+    <div id='container'>
       <Header />
-      <Router>
-        <main>
+      <main>
+        <Router>
           <Suspense fallback={<h2>Loading...</h2>}>
             <Routes>
               <Route path='/' element={<Home />} />
@@ -38,8 +38,8 @@ function App() {
               <Route path='/contact' element={<Contact />} />
             </Routes>
           </Suspense>
-        </main>
-      </Router>
+        </Router>
+      </main>
       <Footer />
     </div>
   )
