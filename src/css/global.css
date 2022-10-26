@@ -5,17 +5,36 @@
     text-decoration: none;
 }
 
-header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+.bgImg {
+    height: 100vh;
+    background-image: url('../assets/images/carlos-alfonso-skyline-clip-resize-bw.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
-h1 {
+header {
+    width: 100%;
+    min-height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient(to bottom, rgba(222,222,222,1), rgba(255,255,255,0));
+}
+
+.main-title {
     width: 22%;
     text-align: center;
     flex-grow: 0;
     flex-shrink: 0;
+    padding-top: 5px;
+}
+
+.main-title:hover {
+    cursor: pointer;
+}
+
+.main-title h1 {
+    color: darkolivegreen;
 }
 
 nav {
@@ -23,7 +42,7 @@ nav {
     flex-shrink: 0;
     display: flex;
     justify-content: space-evenly;
-    align-items: flex-end;
+    align-items: center;
 }
 
 main {
@@ -31,11 +50,36 @@ main {
     flex-direction: column;
     align-items: center;
     padding-top: 25px;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 footer {
     width: 100%;
     position: fixed;
     bottom: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer div {
+    width: max-content;
+}
+  
+.footer-left {
     text-align: center;
+    font-size: 0.7rem;
+}
+
+.footer-left a {
+    color: slateblue;
+}
+
+.footer-right {
+    text-align: center;
+}
+
+.footer-link {
+    padding: 0 22px;
+    position: relative;
+    font-size: 1.5rem;
 }
