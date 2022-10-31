@@ -1,13 +1,14 @@
+import { NavBarProps } from "../App";
 import { Navbar } from "./Navbar";
 
-export function Header() {
+export function Header({ setPage }: NavBarProps) {
     return (
         <header>
-            <div className='site-title' onClick={() => window.location.assign('/')}>
+            <div className='site-title' onClick={() => setPage("home")}>
                 <h1>Stephen Trudell</h1>
                 <p>Full Stack Web Developer</p>
             </div>
-            <Navbar />
+            <Navbar setPage={setPage} />
         </header>
     )
 }
