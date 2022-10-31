@@ -1,3 +1,5 @@
 export default function Home() {
-    return <section>Home</section>
+    return (
+        <section>Home</section>
+    )
 }

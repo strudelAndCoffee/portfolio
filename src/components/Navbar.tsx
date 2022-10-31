@@ -1,4 +1,4 @@
-export default function Navbar() {
+export function Navbar() {
     return (
         <nav>
             <a href='/portfolio'>Portfolio</a>

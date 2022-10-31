@@ -1,6 +1,6 @@
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
 
-export default function Footer() {
+export function Footer() {
     return (
         <footer>
             <div className="footer-left">

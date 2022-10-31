@@ -1,9 +1,9 @@
-import Navbar from "./Navbar";
+import { Navbar } from "./Navbar";
 
-export default function Header() {
+export function Header() {
     return (
         <header>
-            <div className='main-title' onClick={() => window.location.assign('/')}>
+            <div className='site-title' onClick={() => window.location.assign('/')}>
                 <h1>Stephen Trudell</h1>
                 <p>Full Stack Web Developer</p>
             </div>
