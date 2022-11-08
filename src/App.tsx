@@ -12,7 +12,7 @@ function App() {
   return (
     <div className='container'>
       <Header setPage={setPage} />
-      <MainContent page={page} />
+      <MainContent page={page} setPage={setPage} />
       <Footer />
     </div>
   )
