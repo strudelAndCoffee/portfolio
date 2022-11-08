@@ -13,13 +13,14 @@ const Contact = lazy(() => import('../pages/Contact'))
 
 export type MainContentProps = {
   page: string
+  setPage: React.Dispatch<React.SetStateAction<string>>
 }
 
-export function MainContent({ page }: MainContentProps) {
+export function MainContent({ page, setPage }: MainContentProps) {
   return (
     <main>
       <Suspense fallback={<><p>Loading...</p></>}>
-        {page == "home" && <Home />}
+        {page == "home" && <Home setPage={setPage} />}
         {page == "port" && <Portfolio />}
         {page == "about" && <About />}
         {page == "cert" && <Certification />}

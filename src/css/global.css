@@ -3,24 +3,28 @@
     padding: 0;
     font-family: 'Times New Roman', Times, serif;
     text-decoration: none;
+    background-color: #fafafa;
+}
+
+a, a:visited  {
+    color: slateblue;
 }
 
 .container {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 header {
     width: 100%;
     display: flex;
-    justify-content: space-between;
 }
 
 .site-title {
-    width: 22%;
-    text-align: center;
+    width: 15vw;
     flex-grow: 0;
     flex-shrink: 0;
     padding-top: 5px;
+    padding-left: 15px;
     cursor: pointer;
 }
 
@@ -29,17 +33,29 @@ header {
 }
 
 .nav-menu {
-    padding-top: 15px;
-    padding-right: 15px;
+    padding-top: 12px;
     font-size: 1.5rem;
     cursor: pointer;
+}
+
+.nav-menu.closed {
+    padding-left: 5px;
+    transition: padding-left .3s ease-in-out;
+}
+
+.nav-menu.closed:hover {
+    padding-left: 10px;
+}
+
+.nav-menu.open {
+    padding-left: 10px;
 }
 
 nav {
     flex-grow: 1;
     flex-shrink: 0;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
 }
 
