@@ -5,20 +5,14 @@
     text-decoration: none;
 }
 
-#container {
+.container {
     height: 100vh;
-    background-image: url("../assets/images/bg-img.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 header {
     width: 100%;
-    min-height: 8vh;
     display: flex;
     justify-content: space-between;
-    background-color: rgba(0,0,0,0);
 }
 
 .site-title {
@@ -43,6 +37,17 @@ nav {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+}
+
+.navlink {
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.navlink:hover {
+    text-decoration: underline;
 }
 
 main {

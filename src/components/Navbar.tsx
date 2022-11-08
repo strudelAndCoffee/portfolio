@@ -3,12 +3,12 @@ import { NavBarProps } from "../App";
 export function Navbar({ setPage }: NavBarProps) {
     return (
         <nav>
-            <button onClick={() => setPage("port")}>Portfolio</button>
-            <button onClick={() => setPage("about")}>About</button>
-            <button onClick={() => setPage("cert")}>Certification</button>
-            <button onClick={() => setPage("resume")}>Resume</button>
-            <button onClick={() => setPage("comm")}>Community</button>
-            <button onClick={() => setPage("cont")}>Contact</button>
+            <button className='navlink' onClick={() => setPage("port")}>Portfolio</button>
+            <button className='navlink' onClick={() => setPage("about")}>About</button>
+            <button className='navlink' onClick={() => setPage("cert")}>Certification</button>
+            <button className='navlink' onClick={() => setPage("resume")}>Resume</button>
+            <button className='navlink' onClick={() => setPage("comm")}>Community</button>
+            <button className='navlink' onClick={() => setPage("cont")}>Contact</button>
         </nav>
     )
 }

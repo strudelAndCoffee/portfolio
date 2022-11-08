@@ -17,7 +17,7 @@ function App() {
   const [page, setPage] = useState<string>("home")
 
   return (
-    <div id='container'>
+    <div className='container'>
       <Header setPage={setPage} />
       <MainContent page={page} />
       <Footer />
