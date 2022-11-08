@@ -7,7 +7,7 @@ import { MainContent } from './components/MainContent'
 import { Footer } from './components/Footer'
 
 function App() {
-  const [page, setPage] = useState<string>("home")
+  const [page, setPage] = useState("home")
 
   return (
     <div className='container'>
