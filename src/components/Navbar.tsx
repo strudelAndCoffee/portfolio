@@ -1,4 +1,6 @@
-import { NavBarProps } from "../App";
+export type NavBarProps = {
+    setPage: React.Dispatch<React.SetStateAction<string>>
+}
 
 export function Navbar({ setPage }: NavBarProps) {
     return (

@@ -1,5 +1,4 @@
 import { lazy, Suspense } from 'react'
-import { MainContentProps } from '../App'
 import '../css/global.css'
 
 // Pages
@@ -11,6 +10,10 @@ const Certification = lazy(() => import('../pages/Certification'))
 const Resume = lazy(() => import('../pages/Resume'))
 const Community = lazy(() => import('../pages/Community'))
 const Contact = lazy(() => import('../pages/Contact'))
+
+export type MainContentProps = {
+  page: string
+}
 
 export function MainContent({ page }: MainContentProps) {
   return (
