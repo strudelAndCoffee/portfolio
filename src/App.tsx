@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div className='container'>
-      <Header setPage={setPage} />
+      <Header page={page} setPage={setPage} />
       <MainContent page={page} setPage={setPage} />
       <Footer />
     </div>

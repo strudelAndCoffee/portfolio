@@ -24,6 +24,7 @@ a, a:visited  {
 header {
     width: 100%;
     display: flex;
+    align-items: center;
 }
 
 .site-title {
@@ -37,6 +38,18 @@ header {
 
 .site-title h1 {
     color: var(--light);
+}
+
+.current-page-container {
+    padding-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.current-page {
+    padding: 0 7px;
 }
 
 .nav-menu-arrow {
@@ -71,6 +84,7 @@ nav {
 .navlink {
     background: none;
     border: none;
+    color: var(--light);
     font-size: 1.3rem;
     cursor: pointer;
 }
