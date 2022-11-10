@@ -71,6 +71,7 @@ nav {
 .navlink {
     background: none;
     border: none;
+    color: var(--light);
     font-size: 1.3rem;
     cursor: pointer;
 }
