@@ -11,11 +11,11 @@ export function Header({ setPage }: NavBarProps) {
             </div>
             {menuOpen
                 ?
-                    (<div className='nav-menu open' onClick={() => setMenuOpen((prev) => !prev)}>
+                    (<div className='nav-menu-arrow open' onClick={() => setMenuOpen((prev) => !prev)}>
                         <FaAngleLeft />
                     </div>)
                 :
-                    (<div className='nav-menu closed' onClick={() => setMenuOpen((prev) => !prev)}>
+                    (<div className='nav-menu-arrow closed' onClick={() => setMenuOpen((prev) => !prev)}>
                         <FaAngleRight />
                     </div>)
             }

@@ -1,17 +1,24 @@
+:root {
+    --dark: #070707;
+    --light: #eeeeee;
+    --link: slateblue;
+}
+
 * {
     margin: 0;
     padding: 0;
     font-family: 'Times New Roman', Times, serif;
     text-decoration: none;
-    background-color: #fafafa;
 }
 
 a, a:visited  {
-    color: slateblue;
+    color: var(--link);
 }
 
 .container {
     min-height: 100vh;
+    background-color: var(--dark);
+    color: var(--light);
 }
 
 header {
@@ -29,25 +36,27 @@ header {
 }
 
 .site-title h1 {
-    color: darkolivegreen;
+    color: var(--light);
 }
 
-.nav-menu {
+.nav-menu-arrow {
+    padding: 0;
+    margin: 0;
     padding-top: 12px;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     cursor: pointer;
 }
 
-.nav-menu.closed {
-    padding-left: 5px;
+.nav-menu-arrow.closed {
+    padding-left: 0;
     transition: padding-left .3s ease-in-out;
 }
 
-.nav-menu.closed:hover {
-    padding-left: 10px;
+.nav-menu-arrow.closed:hover {
+    padding-left: 5px;
 }
 
-.nav-menu.open {
+.nav-menu-arrow.open {
     padding-left: 10px;
 }
 
@@ -103,7 +112,13 @@ footer div {
 }
 
 .footer-link {
-    padding: 0 22px;
+    margin: 0 22px;
     position: relative;
     font-size: 1.5rem;
+    bottom: 0;
+    transition: bottom .2s ease-in-out;
+}
+
+.footer-link:hover {
+    bottom: 3px;
 }
