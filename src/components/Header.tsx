@@ -26,23 +26,24 @@ export function Header({ page, setPage }: HeaderProps) {
                 <h1>Stephen Trudell</h1>
             </div>
             {page !== 'home'
-                ?
-                    (<div className='current-page-container'>
-                        <FaAngleRight />
+                ? (
+                    <div className='current-page-container'>
                         <span className='current-page'>{pages[page]}</span>
-                    </div>)
-                :
-                    (<></>)
+                    </div>
+                ) : (
+                    <></>
+                )
             }
             {menuOpen
-                ?
-                    (<div className='nav-menu-arrow open' onClick={() => setMenuOpen((prev) => !prev)}>
+                ? (
+                    <div className='nav-menu-arrow open' onClick={() => setMenuOpen((prev) => !prev)}>
                         <FaAngleLeft />
-                    </div>)
-                :
-                    (<div className='nav-menu-arrow closed' onClick={() => setMenuOpen((prev) => !prev)}>
+                    </div>
+                ) : (
+                    <div className='nav-menu-arrow closed' onClick={() => setMenuOpen((prev) => !prev)}>
                         <FaAngleRight />
-                    </div>)
+                    </div>
+                )
             }
             {menuOpen && <Navbar setPage={setPage} />}
         </header>
