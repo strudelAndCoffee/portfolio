@@ -1,0 +1,91 @@
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.site-title {
+    width: 15vw;
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding-top: 5px;
+    padding-left: 15px;
+    cursor: pointer;
+}
+
+.site-title h1 {
+    color: var(--light);
+}
+
+.current-page-container {
+    padding-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.current-page {
+    padding: 3px 7px 3px 15px;
+    margin-left: 5px;
+    border-left: 1px solid var(--light);
+}
+
+.nav-menu-arrow {
+    padding: 0;
+    margin: 0;
+    padding-top: 12px;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.nav-menu-arrow.closed {
+    padding-left: 0;
+    transition: padding-left .3s ease-in-out;
+}
+
+.nav-menu-arrow.closed:hover {
+    padding-left: 5px;
+}
+
+.nav-menu-arrow.open {
+    padding-left: 10px;
+}
+
+.nav {
+    flex-grow: 1;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navlink {
+    background: none;
+    border: none;
+    color: var(--light);
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.navlink:hover {
+    text-decoration: underline;
+}
+
+.ext-links-container {
+    display: flex;
+    flex-wrap: nowrap;
+    max-width: min-content;
+}
+
+.ext-link {
+    margin: 0 12px;
+    position: relative;
+    font-size: 1.5rem;
+    top: 0;
+    transition: top .2s ease-in-out;
+}
+
+.ext-link:hover {
+    top: 3px;
+}
