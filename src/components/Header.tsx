@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { FaAngleLeft, FaAngleRight, FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa'
+import { FaBars, FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa'
 import styles from '../css/header.module.css'
 
 import { Navbar } from "./Navbar";
@@ -25,33 +25,33 @@ export function Header({ page, setPage }: HeaderProps) {
 
     return (
         <header className={styles.header}>
-            <div className={styles['site-title']} onClick={() => setPage("home")}>
-                <h1>Stephen Trudell</h1>
+            <div className={`${styles['header-row']} ${styles['left']}`}>
+                <h1 className={styles['site-title']} onClick={() => setPage("home")}>Stephen Trudell</h1>
+                {page !== 'home'
+                    ? (
+                        // <div className={styles['current-page-container']}>
+                            <div className={styles['current-page']}>{pages[page]}</div>
+                        // </div>
+                    ) : (
+                        <></>
+                    )
+                }
             </div>
-            {page !== 'home'
-                ? (
-                    <div className={styles['current-page-container']}>
-                        <span className={styles['current-page']}>{pages[page]}</span>
-                    </div>
-                ) : (
-                    <></>
-                )
-            }
-            <div className={styles['navbar-container']}>
+            <div className={`${styles['header-row']} ${styles['middle']}`}>
                 {menuOpen
                     ? (
-                        <div className={`${styles['nav-menu-arrow']} ${styles.open}`} onClick={() => setMenuOpen((prev) => !prev)}>
-                            <FaAngleLeft />
+                        <div className={`${styles['nav-menu']} ${styles.open}`} onClick={() => setMenuOpen((prev) => !prev)}>
+                            <FaBars />
                         </div>
                     ) : (
-                        <div className={`${styles['nav-menu-arrow']} ${styles.closed}`} onClick={() => setMenuOpen((prev) => !prev)}>
-                            <FaAngleRight />
+                        <div className={`${styles['nav-menu']} ${styles.closed}`} onClick={() => setMenuOpen((prev) => !prev)}>
+                            <FaBars />
                         </div>
                     )
                 }
                 {menuOpen && <Navbar setPage={setPage} />}
             </div>
-            <div className={styles['ext-links-container']}>
+            <div className={`${styles['header-row']} ${styles['right']}`}>
                 <a href="https://github.com/strudelAndCoffee" target="_blank" rel="noreferrer" className={styles['ext-link']}>
                     <FaGithub />
                 </a>
