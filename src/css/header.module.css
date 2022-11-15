@@ -1,8 +1,9 @@
 .header {
     width: 100%;
+    height: max-content;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .header-row {
@@ -34,29 +35,21 @@
 
 .header-row.middle {
     flex-grow: 1;
+    padding-top: 5px;
 }
 
 .nav-menu {
     padding: 0;
     margin: 0;
-    font-size: 1.4rem;
+    padding-top: 3px;
     cursor: pointer;
 }
 
-.nav-menu.closed {
-    padding-top: 0;
-    transition: padding-top .3s ease-in-out;
+.nav-menu svg {
+    font-size: 1.4rem;
 }
 
-.nav-menu.closed:hover {
-    padding-top: 5px;
-}
-
-.nav-menu.open {
-    padding-left: 10px;
-}
-
-.nav {
+.navbar {
     min-width: max-content;
     flex-grow: 1;
     display: flex;
@@ -81,6 +74,7 @@
 
 .header-row.right {
     justify-content: flex-end;
+    padding-top: 5px;
 }
 
 .ext-link {

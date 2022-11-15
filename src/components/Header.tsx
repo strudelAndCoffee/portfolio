@@ -29,9 +29,7 @@ export function Header({ page, setPage }: HeaderProps) {
                 <h1 className={styles['site-title']} onClick={() => setPage("home")}>Stephen Trudell</h1>
                 {page !== 'home'
                     ? (
-                        // <div className={styles['current-page-container']}>
-                            <div className={styles['current-page']}>{pages[page]}</div>
-                        // </div>
+                        <div className={styles['current-page']}>{pages[page]}</div>
                     ) : (
                         <></>
                     )

@@ -32,35 +32,9 @@ footer {
     width: 100%;
     position: fixed;
     bottom: 0;
-    display: flex;
-    justify-content: space-between;
-}
-
-footer div {
-    width: max-content;
-}
-  
-.footer-left {
-    text-align: center;
-    font-size: 0.7rem;
-}
-
-.footer-left a {
-    color: slateblue;
-}
-
-.footer-right {
     text-align: center;
 }
 
-.footer-link {
-    margin: 0 22px;
-    position: relative;
-    font-size: 1.5rem;
-    bottom: 0;
-    transition: bottom .2s ease-in-out;
-}
-
-.footer-link:hover {
-    bottom: 3px;
+footer svg {
+    font-size: .7rem;
 }

@@ -6,7 +6,7 @@ export type NavBarProps = {
 
 export function Navbar({ setPage }: NavBarProps) {
     return (
-        <nav className={styles.nav}>
+        <nav className={styles.navbar}>
             <button className={styles.navlink} onClick={() => setPage("port")}>Portfolio</button>
             <button className={styles.navlink} onClick={() => setPage("about")}>About</button>
             <button className={styles.navlink} onClick={() => setPage("cert")}>Certification</button>
