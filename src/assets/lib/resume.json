@@ -1,0 +1,10 @@
+{
+    "Languages": ["JavaScript","TypeScript","Python","SQL","NoSQL","CSS","HTML"],
+    "Frameworks": ["Node","React","Next","Angular"],
+    "Front End": ["Tailwind","Radix","Bulma","Bootstrap"],
+    "Server Side": ["REST APIs","Express","Nest","GraphQL","Apollo"],
+    "Databases": ["MongoDB","MySQL","PostgreSQL"],
+    "Deployment": ["AWS","Vercel","GitHub"],
+    "DevOps": ["Accesibility","Mobile Responsive/Mobile First Design","AGILE","CD/CI","Git"],
+    "Acronym Soup": ["MVC","SPAs","PWAs","TDD","SEO"]
+}
