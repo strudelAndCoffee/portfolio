@@ -36,6 +36,7 @@ export function Header({ page, setPage }: HeaderProps) {
                 }
             </div>
             <div className={`${styles['header-row']} ${styles['middle']}`}>
+                {menuOpen && <Navbar setPage={setPage} />}
                 {menuOpen
                     ? (
                         <div className={`${styles['nav-menu']} ${styles.open}`} onClick={() => setMenuOpen((prev) => !prev)}>
@@ -47,7 +48,6 @@ export function Header({ page, setPage }: HeaderProps) {
                         </div>
                     )
                 }
-                {menuOpen && <Navbar setPage={setPage} />}
             </div>
             <div className={`${styles['header-row']} ${styles['right']}`}>
                 <a href="https://github.com/strudelAndCoffee" target="_blank" rel="noreferrer" className={styles['ext-link']}>
