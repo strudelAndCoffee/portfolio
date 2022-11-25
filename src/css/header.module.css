@@ -23,6 +23,7 @@
 .site-title {
     cursor: pointer;
     color: var(--light);
+    padding-left: .5rem;
 }
 
 .current-page {
@@ -64,10 +65,12 @@
     font-size: 1.3rem;
     cursor: pointer;
     margin-inline: 1.2rem;
+    border-bottom: 1px solid rgba(255,255,255,0);
+    transition: border-bottom .25s ease-in-out;
 }
 
 .navlink:hover {
-    text-decoration: underline;
+    border-bottom: 1px solid rgba(255,255,255,1);
 }
 
 /* Right, ext-links */
