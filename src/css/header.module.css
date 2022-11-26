@@ -44,6 +44,12 @@
     margin: 0;
     padding-top: 3px;
     cursor: pointer;
+    transform: rotateZ(0deg) rotateX(0deg);
+    transition: transform .4s ease-in-out;
+}
+
+.nav-menu.open {
+    transform: rotateZ(90deg) rotateX(50deg);
 }
 
 .nav-menu svg {
@@ -66,7 +72,8 @@
     cursor: pointer;
     margin-inline: 1.2rem;
     border-bottom: 1px solid rgba(255,255,255,0);
-    transition: border-bottom .25s ease-in-out;
+    transform: rotateY(0deg);
+    transition: border-bottom .25s ease;
 }
 
 .navlink:hover {

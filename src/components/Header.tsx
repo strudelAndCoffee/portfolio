@@ -39,12 +39,16 @@ export function Header({ page, setPage }: HeaderProps) {
                 {menuOpen && <Navbar setPage={setPage} />}
                 {menuOpen
                     ? (
-                        <div className={`${styles['nav-menu']} ${styles.open}`} onClick={() => setMenuOpen((prev) => !prev)}>
-                            <FaBars />
+                        <div
+                            className={`${styles['nav-menu']} ${styles.open}`}
+                            onClick={() => setMenuOpen((prev) => !prev)}
+                        ><FaBars />
                         </div>
                     ) : (
-                        <div className={`${styles['nav-menu']} ${styles.closed}`} onClick={() => setMenuOpen((prev) => !prev)}>
-                            <FaBars />
+                        <div
+                            className={`${styles['nav-menu']} ${styles.closed}`}
+                            onClick={() => setMenuOpen((prev) => !prev)}
+                        ><FaBars />
                         </div>
                     )
                 }
