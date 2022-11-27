@@ -23,6 +23,7 @@
 .site-title {
     cursor: pointer;
     color: var(--light);
+    padding-left: .5rem;
 }
 
 .current-page {
@@ -43,6 +44,12 @@
     margin: 0;
     padding-top: 3px;
     cursor: pointer;
+    transform: rotateZ(0deg) rotateX(0deg);
+    transition: transform .4s ease-in-out;
+}
+
+.nav-menu.open {
+    transform: rotateZ(90deg) rotateX(50deg);
 }
 
 .nav-menu svg {
@@ -64,10 +71,13 @@
     font-size: 1.3rem;
     cursor: pointer;
     margin-inline: 1.2rem;
+    border-bottom: 1px solid rgba(255,255,255,0);
+    transform: rotateY(0deg);
+    transition: border-bottom .25s ease;
 }
 
 .navlink:hover {
-    text-decoration: underline;
+    border-bottom: 1px solid rgba(255,255,255,1);
 }
 
 /* Right, ext-links */

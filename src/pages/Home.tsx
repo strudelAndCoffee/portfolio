@@ -9,7 +9,7 @@ export default function Home({ setPage }: HomeProps) {
         <section className={styles.container}>
             <div className={styles.upper}>
                 <h2>Full Stack Web Developer</h2>
-                <p>React | TypeScript | Node | MERN | MEAN</p>
+                <p>React | TypeScript | Node | MERN</p>
             </div>
             <div className={styles.lower}>
                 <div className={styles.card} onClick={() => setPage('port')}>

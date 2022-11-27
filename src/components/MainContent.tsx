@@ -2,7 +2,6 @@ import { lazy, Suspense } from 'react'
 import '../css/global.css'
 
 // Pages
-import NoMatch from '../pages/NoMatch'
 const Home = lazy(() => import('../pages/Home'))
 const Portfolio = lazy(() => import('../pages/Portfolio'))
 const About = lazy(() => import('../pages/About'))
@@ -27,7 +26,6 @@ export function MainContent({ page, setPage }: MainContentProps) {
         {page == "resume" && <Resume />}
         {page == "comm" && <Community />}
         {page == "cont" && <Contact />}
-        {page == "nomatch" && <NoMatch />}
       </Suspense>
     </main>
   )
