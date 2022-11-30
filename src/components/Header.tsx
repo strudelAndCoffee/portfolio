@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { FaBars, FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa'
+import { FaBars, FaAngleDown, FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa'
 import styles from '../css/header.module.css'
 
 import { Navbar } from "./Navbar";
@@ -36,13 +36,13 @@ export function Header({ page, setPage }: HeaderProps) {
                 }
             </div>
             <div className={`${styles['header-row']} ${styles['middle']}`}>
-                {menuOpen && <Navbar setPage={setPage} />}
+                <Navbar setPage={setPage} menuOpen={menuOpen} />
                 {menuOpen
                     ? (
                         <div
                             className={`${styles['nav-menu']} ${styles.open}`}
                             onClick={() => setMenuOpen((prev) => !prev)}
-                        ><FaBars />
+                        ><FaAngleDown />
                         </div>
                     ) : (
                         <div
