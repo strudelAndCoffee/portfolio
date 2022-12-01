@@ -37,3 +37,20 @@ footer {
 footer svg {
     font-size: .7rem;
 }
+
+.hidden {
+    opacity: 0;
+    filter: blur(3px);
+    transition: all 1s;
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+}
