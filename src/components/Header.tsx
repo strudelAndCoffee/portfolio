@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { FaBars, FaAngleDown, FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa'
+import { FaBars, FaAngleDown } from 'react-icons/fa'
 import styles from '../css/header.module.css'
 
 import { Navbar } from "./Navbar";
@@ -35,7 +35,7 @@ export function Header({ page, setPage }: HeaderProps) {
                     )
                 }
             </div>
-            <div className={`${styles['header-row']} ${styles['middle']}`}>
+            <div className={`${styles['header-row']} ${styles['right']}`}>
                 <Navbar setPage={setPage} menuOpen={menuOpen} />
                 {menuOpen
                     ? (
@@ -52,17 +52,6 @@ export function Header({ page, setPage }: HeaderProps) {
                         </div>
                     )
                 }
-            </div>
-            <div className={`${styles['header-row']} ${styles['right']}`}>
-                <a href="https://github.com/strudelAndCoffee" target="_blank" rel="noreferrer" className={styles['ext-link']}>
-                    <FaGithub />
-                </a>
-                <a href="https://www.linkedin.com/in/stevie-trudell-atx/" target="_blank" rel="noreferrer" className={styles['ext-link']}>
-                    <FaLinkedin />
-                </a>
-                <a href="mailto:strudelandcoffee@gmail.com" target="_blank" rel="noreferrer" className={styles['ext-link']}>
-                    <FaEnvelope />
-                </a>
             </div>
         </header>
     )

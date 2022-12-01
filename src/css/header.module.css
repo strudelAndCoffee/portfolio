@@ -7,7 +7,7 @@
 }
 
 .header-row {
-    flex: 0 1 33%;
+    flex: 0 1 50%;
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
@@ -32,16 +32,14 @@
     border-left: 1px solid var(--light);
 }
 
-/* Middle, navbar */
+/* Right, navbar */
 
-.header-row.middle {
+.header-row.right {
     padding-top: 5px;
+    padding-right: 1rem;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transform: translateY(-28px);
-    transition: transform .4s ease-in-out;
+    /* flex-direction: column; */
+    align-items: flex-end;
 }
 
 .nav-menu {
@@ -53,37 +51,39 @@
     transition: transform .4s ease;
 }
 
+.nav-menu:hover {
+    color: var(--light);
+}
+
 .nav-menu svg {
     font-size: 1.4rem;
 }
 
-@media not prefers-reduced-motion {
+.header-row.right:has(.nav-menu.open) {
+    transform: translateY(0);
+}
 
-    .header-row.middle:has(.nav-menu.open) {
-        transform: translateY(0);
-    }
+.nav-menu.open {
+    transform: rotateZ(180deg);
+}
 
-    .nav-menu.open {
-        transform: rotateZ(180deg);
-    }
-
-    .navbar {
-        min-width: max-content;
-        flex-grow: 1;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        opacity: 10%;
-        filter: blur(2px);
-        transition: opacity .5s ease-in-out, filter .5s ease-in-out;
-    }
+.navbar {
+    min-width: max-content;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 10%;
+    filter: blur(2px);
+    transform: translateY(-28px);
+    transition: transform .4s ease-in-out, opacity .5s ease-in-out, filter .5s ease-in-out;
+}
 
 
-    .navbar.open {
-        opacity: 100%;
-        filter: blur(0);
-    }
-
+.navbar.open {
+    opacity: 100%;
+    filter: blur(0);
+    transform: translateY(0)
 }
 
 .navlink {
@@ -93,29 +93,10 @@
     font-size: 1.3rem;
     cursor: pointer;
     margin-inline: 1.2rem;
-    border-bottom: 1px solid rgba(255,255,255,0);
+    border-bottom: 1px solid #0000;
     transition: border-bottom .25s ease;
 }
 
 .navlink:hover {
-    border-bottom: 1px solid rgba(255,255,255,1);
-}
-
-/* Right, ext-links */
-
-.header-row.right {
-    justify-content: flex-end;
-    padding-top: 5px;
-}
-
-.ext-link {
-    margin: 0 12px;
-    position: relative;
-    font-size: 1.5rem;
-    top: 0;
-    transition: top .2s ease-in-out;
-}
-
-.ext-link:hover {
-    top: 3px;
+    border-bottom: 1px solid var(--light);
 }
