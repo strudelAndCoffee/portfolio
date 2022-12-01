@@ -35,7 +35,7 @@ export function Header({ page, setPage }: HeaderProps) {
                     )
                 }
             </div>
-            <div className={`${styles['header-row']} ${styles['middle']}`}>
+            <div className={`${styles['header-row']} ${styles['right']}`}>
                 <Navbar setPage={setPage} menuOpen={menuOpen} />
                 {menuOpen
                     ? (
