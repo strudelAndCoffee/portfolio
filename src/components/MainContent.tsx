@@ -1,24 +1,30 @@
-import { lazy, Suspense } from 'react'
-import '../css/global.css'
+import { lazy, Suspense } from "react";
+import "../css/global.css";
 
 // Pages
-const Home = lazy(() => import('../pages/Home'))
-const Portfolio = lazy(() => import('../pages/Portfolio'))
-const About = lazy(() => import('../pages/About'))
-const Certification = lazy(() => import('../pages/Certification'))
-const Resume = lazy(() => import('../pages/Resume'))
-const Community = lazy(() => import('../pages/Community'))
-const Contact = lazy(() => import('../pages/Contact'))
+const Home = lazy(() => import("../pages/Home"));
+const Portfolio = lazy(() => import("../pages/Portfolio"));
+const About = lazy(() => import("../pages/About"));
+const Certification = lazy(() => import("../pages/Certification"));
+const Resume = lazy(() => import("../pages/Resume"));
+const Community = lazy(() => import("../pages/Community"));
+const Contact = lazy(() => import("../pages/Contact"));
 
 export type MainContentProps = {
-  page: string
-  setPage: React.Dispatch<React.SetStateAction<string>>
-}
+  page: string;
+  setPage: React.Dispatch<React.SetStateAction<string>>;
+};
 
 export function MainContent({ page, setPage }: MainContentProps) {
   return (
     <main>
-      <Suspense fallback={<><p>Loading...</p></>}>
+      <Suspense
+        fallback={
+          <>
+            <p>Loading...</p>
+          </>
+        }
+      >
         {page == "home" && <Home setPage={setPage} />}
         {page == "port" && <Portfolio />}
         {page == "about" && <About />}
@@ -28,5 +34,5 @@ export function MainContent({ page, setPage }: MainContentProps) {
         {page == "cont" && <Contact />}
       </Suspense>
     </main>
-  )
+  );
 }
